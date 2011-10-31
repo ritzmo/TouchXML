@@ -350,9 +350,9 @@ else
 	for (N = 0; N < theXPathObject->nodesetval->nodeNr; N++)
 		{
 		xmlNodePtr theNode = theXPathObject->nodesetval->nodeTab[N];
-		CXMLNode *theNode = [CXMLNode nodeWithLibXMLNode:theCurrentNode freeOnDealloc:NO];
-		if(theNode)
-			[theArray addObject:theNode];
+		CXMLNode *xmlNode = [CXMLNode nodeWithLibXMLNode:theNode freeOnDealloc:NO];
+		if(xmlNode)
+			[theArray addObject:xmlNode];
 		}
 		
 	theResult = theArray;
