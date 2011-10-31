@@ -109,7 +109,9 @@ return((CXMLNodeKind)_node->type); // TODO this isn't 100% accurate!
 	
 	for (CXMLNode *child in [self children])
 	{
-		[theStringValue appendString:[child stringValue]];
+		NSString *stringValue = [child stringValue];
+		if(stringValue)
+			[theStringValue appendString:stringValue];
 	}
 	
 	return theStringValue;
